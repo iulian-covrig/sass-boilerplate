@@ -31,7 +31,7 @@ $font-light: 300 !default;
 $font-medium: 500 !default;
 $font-bold: 700 !default;
 $font-large: ($font-size * 1.25) !default;
-$font-small : ($font-size * .875) !default;
+$font-small: ($font-size * .875) !default;
 $h1: $font-size * 2.5 !default;
 $h2: $font-size * 2.25 !default;
 $h3: $font-size * 2 !default;
@@ -40,8 +40,8 @@ $h5: $font-size * 1.5 !default;
 $h6: $font-size * 1.25 !default;
 
 //Grid
-$grid-columns: 12 !default;
-$grid-gutter: 30px !default;
+$columns: 12 !default;
+$gutter: 30px !default;
 
 $grid-xs: 0 !default;
 $grid-sm: 576px !default;
@@ -49,14 +49,13 @@ $grid-md: 768px !default;
 $grid-lg: 992px !default;
 $grid-xl: 1200px !default;
 
-//Container
-$container-mobile: 540px !default;
-$container-tablet: 720px !default;
-$container-desktop--small: 960px !default;
-$container-desktop--large: 1140px !default;
+//Containers
+$mobile: 540px !default;
+$tablet: 720px !default;
+$desktop-sm: 960px !default;
+$desktop-lg: 1140px !default;
 
 //Main
-$gutter: 30px !default;
 $no-gutter: 0 !default;
 $no-margin: 0 !default;
 

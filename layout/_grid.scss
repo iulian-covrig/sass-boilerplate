@@ -26,21 +26,21 @@ $devices: (
 );
 
 @each $device in $devices {
-    $device-viewport: map-get($device, 'device');
-    $device-width: map-get($device, 'width');
+    $viewport: map-get($device, 'device');
+    $width: map-get($device, 'width');
 
-    @for $i from 1 through $grid-columns {
-        .column-#{$i}--#{$device-viewport} {
+    @for $i from 1 through $columns {
+        .column-#{$i}--#{$viewport} {
             @extend %container;
         }
     }
 
-    @media all and (min-width: $device-width) {
-        @for $i from 1 through $grid-columns {
-            .column-#{$i}--#{$device-viewport} {
-                -ms-flex: 0 0 (100% / $grid-columns * $i);
-                flex: 0 0 (100% / $grid-columns * $i);
-                max-width: 100% / $grid-columns * $i;
+    @media all and (min-width: $width) {
+        @for $i from 1 through $columns {
+            .column-#{$i}--#{$viewport} {
+                -ms-flex: 0 0 (100% / $columns * $i);
+                flex: 0 0 (100% / $columns * $i);
+                max-width: 100% / $columns * $i;
             }
         }
     }

@@ -6,13 +6,6 @@
     @include clearfix;
 }
 
-.container {
-    width: 100%;
-    position: relative;
-    padding-left: ($gutter / 2);
-    padding-right: ($gutter / 2);
-}
-
 .hand {
     cursor: pointer;
 }
@@ -37,8 +30,47 @@
     margin: $no-margin;
 }
 
+.responsive-img {
+    @include responsive-img;
+}
+
+.fit-img {
+    @include fit-img;
+}
+
 .row {
     @include row;
+}
+
+.column {
+    @include column;
+}
+
+%container {
+    @include container;
+}
+
+.container {
+    @extend %container;
+    @media screen and (min-width: $grid-sm) {
+        width: $mobile;
+    }
+
+    @media screen and (min-width: $grid-md) {
+        width: $tablet;
+    }
+
+    @media screen and (min-width: $grid-lg) {
+        width: $desktop-sm;
+    }
+
+    @media screen and (min-width: $grid-xl) {
+        width: $desktop-lg;
+    }
+}
+
+.container-fluid {
+    @extend %container;
 }
 
 $positions: top right bottom left;
