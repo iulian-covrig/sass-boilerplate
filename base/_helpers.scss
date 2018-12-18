@@ -1,0 +1,52 @@
+// -----------------------------------------------------------------------------
+// This file contains CSS helper classes.
+// -----------------------------------------------------------------------------
+
+.clearfix {
+    @include clearfix;
+}
+
+.container {
+    width: 100%;
+    position: relative;
+    padding-left: ($gutter / 2);
+    padding-right: ($gutter / 2);
+}
+
+.hand {
+    cursor: pointer;
+}
+
+.hide {
+    display: none;
+}
+
+.show {
+    display: block;
+}
+
+.effect {
+    @include effect;
+}
+
+.no-padding {
+    padding: $no-gutter;
+}
+
+.no-margin {
+    margin: $no-margin;
+}
+
+.row {
+    @include row;
+}
+
+$positions: top right bottom left;
+
+@each $position in $positions {
+    @for $i from 1 to 4 {
+        .margin-#{$position}--#{$i}0 {
+            margin-#{$position}: #{$i}0px;
+        }
+    }
+}

@@ -1,0 +1,47 @@
+// -----------------------------------------------------------------------------
+// This file contains grid system.
+// -----------------------------------------------------------------------------
+
+$devices: (
+    (
+        'device': 'mobile-small',
+        'width': $grid-xs
+    ),
+    (
+        'device': 'mobile',
+        'width': $grid-sm
+    ),
+    (
+        'device': 'tablet',
+        'width': $grid-md
+    ),
+    (
+        'device': 'desktop',
+        'width': $grid-lg
+    ),
+    (
+        'device': 'desktop-large',
+        'width': $grid-xl
+    )
+);
+
+@each $device in $devices {
+    $device-viewport: map-get($device, 'device');
+    $device-width: map-get($device, 'width');
+
+    @for $i from 1 through $grid-columns {
+        .column-#{$i}--#{$device-viewport} {
+            @extend %container;
+        }
+    }
+
+    @media all and (min-width: $device-width) {
+        @for $i from 1 through $grid-columns {
+            .column-#{$i}--#{$device-viewport} {
+                -ms-flex: 0 0 (100% / $grid-columns * $i);
+                flex: 0 0 (100% / $grid-columns * $i);
+                max-width: 100% / $grid-columns * $i;
+            }
+        }
+    }
+}

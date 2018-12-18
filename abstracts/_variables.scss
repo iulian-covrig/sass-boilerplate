@@ -1,0 +1,72 @@
+// -----------------------------------------------------------------------------
+// This file contains all application-wide Sass variables.
+// -----------------------------------------------------------------------------
+
+$base-path: '../images/';
+
+@font-face {
+    font-family: 'OpenSans';
+    src: url(../fonts/OpenSans/OpenSans-Regular.ttf) format(trutype);
+}
+
+//Color
+$color-primary: #852d91 !default;
+$color-secondary: #312a6c !default;
+$color-accent: #f44336 !default;
+$color-font: #242424 !default;
+$color-red: #f44336 !default;
+$color-white: #ffffff !default;
+$color-green: #4caf50 !default;
+$color-grey: #cfd8dc !default;
+$color-border: #90a4ae !default;
+$color-background: #eceff1 !default;
+$color-header--select: #1b1c36 !default;
+$color-hover: #d1c4e9 !default;
+
+//Fonts
+$font-base: 'OpenSans', sans-serif !default;
+$font-size: 1em !default;
+$font-height: 1.45 !default;
+$font-light: 300 !default;
+$font-medium: 500 !default;
+$font-bold: 700 !default;
+$font-large: ($font-size * 1.25) !default;
+$font-small : ($font-size * .875) !default;
+$h1: $font-size * 2.5 !default;
+$h2: $font-size * 2.25 !default;
+$h3: $font-size * 2 !default;
+$h4: $font-size * 1.75 !default;
+$h5: $font-size * 1.5 !default;
+$h6: $font-size * 1.25 !default;
+
+//Grid
+$grid-columns: 12 !default;
+$grid-gutter: 30px !default;
+
+$grid-xs: 0 !default;
+$grid-sm: 576px !default;
+$grid-md: 768px !default;
+$grid-lg: 992px !default;
+$grid-xl: 1200px !default;
+
+//Container
+$container-mobile: 540px !default;
+$container-tablet: 720px !default;
+$container-desktop--small: 960px !default;
+$container-desktop--large: 1140px !default;
+
+//Main
+$gutter: 30px !default;
+$no-gutter: 0 !default;
+$no-margin: 0 !default;
+
+$transition-base: all .3s ease-in-out !default;
+
+//z-index
+$zindex-lvl1: 1010 !default;
+$zindex-lvl2: 1020 !default;
+$zindex-lvl3: 1030 !default;
+$zindex-lvl4: 1040 !default;
+$zindex-lvl5: 1050 !default;
+$zindex-lvl6: 1060 !default;
+$zindex-lvl7: 1070 !default;

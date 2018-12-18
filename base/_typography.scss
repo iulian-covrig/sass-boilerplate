@@ -1,0 +1,51 @@
+// -----------------------------------------------------------------------------
+// Basic typography style for copy text.
+// -----------------------------------------------------------------------------
+
+body {
+  font-family: $font-base;
+  font-size: $font-size;
+  line-height: $font-line-height;
+}
+
+%h {
+  color: $font-color;
+  font-weight: 700;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+h1 {
+  font-size: $h1;
+  @extend %h;
+}
+
+h2 {
+  font-size: $h2;
+  @extend %h;
+}
+
+h3 {
+  font-size: $h3;
+  @extend %h;
+}
+
+h4 {
+  font-size: $h4;
+  @extend %h;
+}
+
+h5 {
+  font-size: $h5;
+  @extend %h;
+}
+
+h6 {
+  font-size: $h6;
+  @extend %h;
+}
+
+p {
+  color: inherit;
+  margin: 0;
+}
